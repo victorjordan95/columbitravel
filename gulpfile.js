@@ -142,8 +142,8 @@ gulp.task('cleanAll', function () {
 gulp.task('watch', function () {
     gulp.watch(paths.html.input,    ['html']);
     gulp.watch(paths.sass.input,    ['sass']);
-    gulp.watch(paths.js.input,      ['js']);
+    gulp.watch(paths.js.input,      ['copyJS']);
     gulp.watch(paths.livereload.input, ['livereload']);
 });
 
-gulp.task("default", gulpSequence('cleanAll', 'connect', 'sass', 'html', 'libs', 'watch', 'copyCSS', 'copyJS', 'fonts', 'imagemin'));
+gulp.task("default", gulpSequence('cleanAll', 'connect','copyCSS', 'sass', 'html', 'libs', 'watch', 'copyJS', 'fonts', 'imagemin'));
