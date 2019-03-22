@@ -21,12 +21,8 @@ var paths = {
         input:      'app/**/*.html'
     },
     sass: {
-        input:      'app/sass/**/*.scss',
-        output:     'build/css'
-    },
-	css: {
-        input:      'app/css/**/*.css',
-        output:     'build/css'
+        input:      'app/assets/scss/**/*.scss',
+        output:     'build/assets/css'
     },
     cleanJs: {
         output:     'build/js/min/all.min.js',
@@ -36,20 +32,20 @@ var paths = {
         output:     'build/js/',
     },
     gif: {
-        input:      'app/*.gif',
+        input:      'app/assets/*.gif',
         output:     'build/assets',
     },
 	font: {
-	input:      'app/fonts/**/*.*',
-        output: 'build/fonts/',
+	input:      'app/assets/fonts/*.*',
+        output:     'build/assets/fonts/',
 	},
     jsLibs: {
         input:   'app/lib/**/*',
         output:  'build/lib'
     },
     imagemin: {
-        input:      'app/images/**/*',
-        output:     'build/images/'
+        input:      'app/assets/img/**/*',
+        output:     'build/assets/img/'
     },
     livereload: {
         input:      ['app/**/*.html', 'app/**/*.js', 'app/**/*.scss']
@@ -83,7 +79,7 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.write())
         .pipe(autoprefixer())
         .pipe(gulp.dest(paths.sass.output))
-		.pipe(gulp.dest('build/css'));
+		.pipe(gulp.dest('build/assets/css'));
 });
 
 
@@ -97,7 +93,8 @@ gulp.task('imagemin', function (){
 
 //FONTS
 gulp.task('fonts', function() {
-    return gulp.src([paths.font.input])
+    return gulp.src([
+		paths.font.input])
         .pipe(gulp.dest(paths.font.output));
 });
 
@@ -114,14 +111,8 @@ gulp.task('gif', function() {
         .pipe(gulp.dest(paths.gif.output));
 });
 
-//COPY CSS
-gulp.task('copyCSS', function() {
-    return gulp.src([paths.css.input])
-        .pipe(gulp.dest(paths.css.output));
-});
-
 //COPY JS
-gulp.task('copyJS', function() {
+gulp.task('js', function() {
     return gulp.src([paths.js.input])
         .pipe(gulp.dest(paths.js.output));
 });
@@ -142,8 +133,8 @@ gulp.task('cleanAll', function () {
 gulp.task('watch', function () {
     gulp.watch(paths.html.input,    ['html']);
     gulp.watch(paths.sass.input,    ['sass']);
-    gulp.watch(paths.js.input,      ['copyJS']);
+    gulp.watch(paths.js.input,      ['js']);
     gulp.watch(paths.livereload.input, ['livereload']);
 });
 
-gulp.task("default", gulpSequence('cleanAll', 'connect','copyCSS', 'sass', 'html', 'libs', 'watch', 'copyJS', 'fonts', 'imagemin'));
+gulp.task("default", gulpSequence('cleanAll', 'connect', 'sass', 'html', 'libs', 'watch', 'js', 'gif', 'fonts', 'imagemin'));
