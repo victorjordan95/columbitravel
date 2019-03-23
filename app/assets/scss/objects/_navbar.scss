@@ -1,0 +1,100 @@
+.navbar-header {
+    background-color: #4a4876;
+}
+
+.navbar {
+    
+    a { 
+        color: #ccc;
+        font-size: 16px;
+    }
+
+    .nav-link {
+        text-transform: uppercase !important;
+        padding: 0 16px!important;
+
+    }
+
+    .nav-bar {
+        border-right: 2px solid #ccc;
+    }
+
+    .dropdown-toggle::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: .255em;
+        vertical-align: .255em;
+        content: " ";
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        border-left: 0;
+    }
+
+    .dropdown-menu {
+        a {
+            color: #000;
+        }
+    }
+
+    .nav-link.dropdown-toggle {
+        align-self: center;
+        display: flex;
+        flex-flow: row wrap;
+        padding-right: 8px;
+    }
+}
+
+.atendimento {
+    background: #39395f;
+    position: absolute;
+    z-index: 100;
+    top: -30px;
+    width: 25%;
+    background: rgb(57,57,95) transparent;
+    background: rgba(57, 57, 95, 0.7);
+    width: 250px;
+
+    .wrapper {
+        height: 100%;
+        min-height: 100%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        color: #fff;
+
+        div {
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, .3);
+            font-size: 12px;
+            color: #fff;
+            padding: 5px;
+        }
+
+        p {
+            font-size: 12px;
+            padding: 32px 0 0;
+        }
+
+        #inputBusca {
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            height: 25px;
+        }
+        .h2 {
+            font-size: 32px;
+            padding: 32px 0 0;
+        }
+        .left-inner-addon i {
+            position: absolute;
+            padding: 6px 12px;
+            pointer-events: none;
+            color: #666;
+        }
+    }
+}

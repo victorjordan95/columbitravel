@@ -12,6 +12,9 @@
 	<link rel="stylesheet" href="lib/owl.carousel.min.css">
 	<link rel="stylesheet" href="lib/owl.theme.default.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -22,61 +25,228 @@
 </head>
 
 <body>
-	<svg style="position: absolute; width: 0; height: 0; overflow: hidden; display:none" version="1.1" xmlns="http://www.w3.org/2000/svg"
-	    xmlns:xlink="http://www.w3.org/1999/xlink">
+	<svg style="position: absolute; width: 0; height: 0; overflow: hidden; display:none" version="1.1"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<defs>
 			<symbol id="icon-arrow-left" viewBox="0 0 32 32">
 				<title>arrow Left</title>
-				<path d="M10.445 11.214l11.111-11.111 4.834 4.833-11.112 11.112 11.111 11.111-4.834 4.834-15.947-15.945z"></path>
+				<path
+					d="M10.445 11.214l11.111-11.111 4.834 4.833-11.112 11.112 11.111 11.111-4.834 4.834-15.947-15.945z">
+				</path>
 			</symbol>
 			<symbol id="icon-arrow-right" viewBox="0 0 32 32">
 				<title>arrow right</title>
-				<path d="M21.55 11.218l-11.101-11.103-4.831 4.829 11.103 11.103-11.101 11.102 4.829 4.83 15.934-15.933z"></path>
+				<path
+					d="M21.55 11.218l-11.101-11.103-4.831 4.829 11.103 11.103-11.101 11.102 4.829 4.83 15.934-15.933z">
+				</path>
 			</symbol>
 			<symbol id="icon-quote" viewBox="0 0 32 32">
 				<title>Quote mark</title>
-				<path d="M30.336 18.336c-0.416-2.784-2.784-4.768-5.472-4.896 0.672-2.496 2.304-3.488 4.288-4.064 0.192-0.064 0.16-0.256 0.16-0.256l-0.32-1.984c0 0-0.032-0.16-0.288-0.128-6.848 0.768-11.488 5.984-10.624 12.32 0.8 4.384 4.224 6.080 7.392 5.632 3.168-0.512 5.344-3.456 4.864-6.624v0zM8.48 13.44c0.64-2.496 2.336-3.488 4.288-4.064 0.192-0.064 0.16-0.256 0.16-0.256l-0.288-1.984c0 0-0.032-0.16-0.288-0.128-6.848 0.736-11.456 5.952-10.656 12.288 0.832 4.416 4.288 6.112 7.424 5.664 3.168-0.512 5.344-3.456 4.832-6.624-0.416-2.816-2.752-4.8-5.472-4.896z"></path>
+				<path
+					d="M30.336 18.336c-0.416-2.784-2.784-4.768-5.472-4.896 0.672-2.496 2.304-3.488 4.288-4.064 0.192-0.064 0.16-0.256 0.16-0.256l-0.32-1.984c0 0-0.032-0.16-0.288-0.128-6.848 0.768-11.488 5.984-10.624 12.32 0.8 4.384 4.224 6.080 7.392 5.632 3.168-0.512 5.344-3.456 4.864-6.624v0zM8.48 13.44c0.64-2.496 2.336-3.488 4.288-4.064 0.192-0.064 0.16-0.256 0.16-0.256l-0.288-1.984c0 0-0.032-0.16-0.288-0.128-6.848 0.736-11.456 5.952-10.656 12.288 0.832 4.416 4.288 6.112 7.424 5.664 3.168-0.512 5.344-3.456 4.832-6.624-0.416-2.816-2.752-4.8-5.472-4.896z">
+				</path>
 			</symbol>
 		</defs>
 	</svg>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+	<div class="navbar-header">
+		<nav class="navbar navbar-expand-lg container">
+			<a class="navbar-brand" href="#">
+				<img src="http://www.colombitravel.com.br/images/logo.png" alt="" width="150">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">
-						Dropdown
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link nav-bar dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Experiências
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link nav-bar dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Destinos
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link nav-bar dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Quando ir
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-bar" href="#">Institucional</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-bar" href="#">Dicas</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contato</a>
+					</li>
+					<li class="nav-item">
+						<div class="atendimento">
+							<div class="wrapper">
+								<div class="container">
+									<p class="mb-0">atendimento@colombitravel.com.br</p>
+									<span class="mt-0 h2"><span style="font-size:12px;">+55 11</span> 3882-0116</span>
+									<div class="input-group left-inner-addon">
+										<input id="inputBusca" type="text" aria-describedby="basic-addon1"
+											class="form-control">
+										<i class="fa fa-search"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+
+	<header class="container-fluid">
+
+		<div class="row h-100">
+
+			<section class="trip-title flex-column col-6">
+				<h1 class="h3"> Viagens Inspiradas em Seus Desejos</h1>
+				<p class="h1 description">
+					Safári na Àfrica
+				</p>
+			</section>
+
+
+			<div class="col-4 header-search flex-column">
+
+				<div class="card mt-3 tab-card">
+					<div class="card-header tab-card-header m-0 pl-0 pb-0">
+						<ul class="nav nav-tabs card-header-tabs m-0" id="myTab" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active show" id="one-tab" data-toggle="tab" href="#one" role="tab"
+									aria-controls="One" aria-selected="true">
+									<i class="fas fa-hotel"></i>
+									Hotel
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab"
+									aria-controls="Two" aria-selected="false">
+									<i class="fas fa-map-marked"></i>
+									Roteiros
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab"
+									aria-controls="Three" aria-selected="false">Three</a>
+							</li>
+						</ul>
 					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
+
+					<div class="tab-content" id="myTabContent">
+
+
+						<div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
+							<h5 class="card-title">Procure por um hotel</h5>
+							<form>
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label>Cidade origem</label>
+										<input type="text" class="form-control" placeholder="Cidade de origem">
+									</div>
+									<div class="form-group col-md-6">
+										<label>Cidade destino</label>
+										<input type="text" class="form-control" placeholder="Cidade de destino">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label>Data ida</label>
+										<input type="date" class="form-control" placeholder="1234 Main St">
+									</div>
+									<div class="form-group col-md-6">
+										<label>Data volta</label>
+										<input type="date" class="form-control" placeholder="1234 Main St">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-4">
+										<label>Adultos</label>
+										<select class="form-control">
+											<option selected>Choose...</option>
+											<option>...</option>
+										</select>
+									</div>
+									<div class="form-group col-md-4">
+										<label>Crianças</label>
+										<select class="form-control">
+											<option selected>Choose...</option>
+											<option>...</option>
+										</select>
+									</div>
+									<div class="form-group col-md-4">
+										<label>Bebês</label>
+										<select class="form-control">
+											<option selected>Choose...</option>
+											<option>...</option>
+										</select>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-primary float-right mb-3">Sign in</button>
+							</form>
+						</div>
+
+
+						<div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
+							<h5 class="card-title">Tab Card Two</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+						<div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
+							<h5 class="card-title">Tab Card Three</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
 		</div>
-	</nav>
+
+	</header>
+
+	<main class="container">
+
+		<section>
+
+		</section>
+
+	</main>
 
 
 	<!-- JSfiles -->

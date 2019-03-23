@@ -1,0 +1,72 @@
+header {
+    background-image: url('http://colombitravel.netsar.com/TravelNetWork/RecursosCms/gerenciar_banner/upload_images/_slide1_HO_d1e629d8251cd33e91767ffbe73b1b8d%20.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    .trip-title {
+        color: #fff;
+        
+
+        .description {
+            margin: 32px 0;
+        }
+    }
+
+    .flex-column {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-search {
+        margin-right: 16%;
+    }
+
+    .card {
+        background-color: transparent;
+    }
+
+    .tab-card {
+        border: none;
+    }
+
+    .tab-content {
+        background-color: #fff;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #ffffff;
+        background-color: #4a4876;
+        border-color: #dee2e6 #dee2e6 #fff;
+    }
+
+
+    .nav-item {
+        background-color: transparent;
+        .nav-link {
+            background-color: #fff;
+        }
+        &:first-child {
+            .nav-link {
+                border-radius: 8px 0 0 0;
+            }
+        }
+        &:last-child {
+            .nav-link {
+                border-radius: 0 8px 0 0;
+            }
+        }
+    }
+
+    .card-header {
+        background-color: transparent;
+
+
+    }
+
+
+}
+
