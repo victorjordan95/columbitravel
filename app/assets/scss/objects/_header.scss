@@ -18,12 +18,9 @@ header {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    .header-search {
-        margin-right: 16%;
-    }
 
     .card {
         background-color: transparent;
@@ -34,20 +31,28 @@ header {
     }
 
     .tab-content {
-        background-color: #fff;
+        background-color: #646060;
+        height: calc(100% - 110px);
+        width: 500px;
+    }
+
+    .nav-tabs .nav-item {
+        margin-bottom: -3px!important;
+        width: 24.33%;
     }
 
     .nav-tabs .nav-link.active {
         color: #ffffff;
         background-color: #4a4876;
         border-color: #dee2e6 #dee2e6 #fff;
+        border: none!important;
     }
-
 
     .nav-item {
         background-color: transparent;
         .nav-link {
-            background-color: #fff;
+            background-color: #888181;
+            color: #fff;
         }
         &:first-child {
             .nav-link {
@@ -61,12 +66,114 @@ header {
         }
     }
 
+    .form-group {
+        label { 
+            color: #fff!important;
+        }
+        i {
+            position: absolute;
+            top: 13px;
+            left: 12px;
+            font-size: 14px;
+        }
+        .input-icon{
+            padding-left: 28px;
+        }
+    }
+
     .card-header {
         background-color: transparent;
+        padding: 0!important;
 
+
+        ul { 
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        .card-header-tabs {
+            
+            a { 
+                &:hover {
+                    background-color: #4a4876;
+                }
+            }
+        }
 
     }
 
 
+    .row-count {
+        align-items: flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .count-people {
+            width: 12%;
+            margin-right: 24px;
+        }
+
+        .person-content {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .person {
+            background-color: #484343;
+            color: #fff;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding: 8px;
+
+
+            span {
+                font-size: 12px;
+                margin: 0 4px;
+                line-height: 16px;
+                max-width: 85px;
+            }
+
+            .form-group {
+                margin: 0;
+            }
+        }
+    }
+
+    .btn {
+        background-color: #483D8B;
+        top: 10px;
+        position: relative;
+    }
+
+    .radio-inline {
+        color: #fff;
+    }
+
+    .more-options {
+        align-self: center;
+        background-color: #2E2E2E;
+        border-radius: 4px;
+        color: #fff;
+        top: 5px;
+        text-align: center;
+    }
+
+    .footer-voo {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        span {
+            color: #fff;
+            font-size: 10px;
+            max-width: 50px;
+        }
+    }
+
 }
+
 
