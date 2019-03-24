@@ -154,12 +154,14 @@ header {
     }
 
     .more-options {
-        align-self: center;
         background-color: #2E2E2E;
         border-radius: 4px;
         color: #fff;
-        top: 5px;
+        top: -8px;
         text-align: center;
+        font-size: 12px;
+        line-height: 12px;
+        padding: 8px 0;
     }
 
     .footer-voo {
