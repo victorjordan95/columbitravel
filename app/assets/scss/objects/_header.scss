@@ -111,7 +111,6 @@ header {
         justify-content: space-between;
 
         .count-people {
-            width: 12%;
             margin-right: 24px;
         }
 
@@ -157,11 +156,11 @@ header {
         background-color: #2E2E2E;
         border-radius: 4px;
         color: #fff;
-        top: -8px;
+        top: 0px;
         text-align: center;
-        font-size: 12px;
-        line-height: 12px;
-        padding: 8px 0;
+        line-height: 13px;
+        height: 40px;
+        padding: 5px;
     }
 
     .footer-voo {
@@ -173,6 +172,24 @@ header {
             color: #fff;
             font-size: 10px;
             max-width: 50px;
+        }
+    }
+
+    #js-options-input {
+        position: absolute;
+        left: 520px;
+        width: 280px;
+        padding: 16px;
+        background-color: #646060;
+
+        .triangle {
+            width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent; 
+            position: absolute;
+            left: -10px;
+            border-right:10px solid #646060; 
         }
     }
 

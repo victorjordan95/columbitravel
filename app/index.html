@@ -8,7 +8,6 @@
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-	<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="lib/owl.carousel.min.css">
 	<link rel="stylesheet" href="lib/owl.theme.default.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
@@ -92,10 +91,18 @@
 							Quando ir
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a>
+							<a class="dropdown-item" href="#">Janeiro</a>
+							<a class="dropdown-item" href="#">Fevereiro</a>
+							<a class="dropdown-item" href="#">Março</a>
+							<a class="dropdown-item" href="#">Abril</a>
+							<a class="dropdown-item" href="#">Maio</a>
+							<a class="dropdown-item" href="#">Junho</a>
+							<a class="dropdown-item" href="#">Julho</a>
+							<a class="dropdown-item" href="#">Agosto</a>
+							<a class="dropdown-item" href="#">Setembro</a>
+							<a class="dropdown-item" href="#">Outubro</a>
+							<a class="dropdown-item" href="#">Novembro</a>
+							<a class="dropdown-item" href="#">Dezembro</a>
 						</div>
 					</li>
 					<li class="nav-item">
@@ -128,7 +135,7 @@
 	</div>
 
 
-	<header>
+	<header class="mb-5">
 
 		<div class="container">
 			<div class="row h-100">
@@ -174,7 +181,6 @@
 
 						<div class="tab-content" id="myTabContent">
 
-
 							<div class="tab-pane fade show active p-3" id="hotel" role="tabpanel"
 								aria-labelledby="one-tab">
 								<form>
@@ -208,54 +214,34 @@
 										<div class="count-people">
 											<div class="form-group">
 												<label>Quartos</label>
-												<select class="form-control">
-													<option selected>3</option>
+												<select class="form-control" id="js-hotel-quartos">
 													<option>1</option>
 													<option>2</option>
+													<option>3</option>
 												</select>
 											</div>
 										</div>
 
-										<div class="person-content mb-3">
+										<div class="person-content mb-3" id="js-hotel-person">
 											<div class="person mb-2">
-												<span>Quarto 1</span>
-												<span>Adultos <br> + de 18 anos</span>
-												<div class="form-group">
-													<select class="form-control">
-														<option selected>3</option>
-														<option>1</option>
-														<option>2</option>
-													</select>
+													<span>Quarto 1</span>
+													<span>ADULTOS <br> + de 18 anos</span>
+													<div class="form-group">
+														<select class="form-control">
+															<option selected>3</option>
+															<option>1</option>
+															<option>2</option>
+														</select>
+													</div>
+													<span>CRIANÇAS <br> 2 a 17 anos</span>
+													<div class="form-group">
+														<select class="form-control">
+															<option selected>3</option>
+															<option>1</option>
+															<option>2</option>
+														</select>
+													</div>
 												</div>
-												<span>CRIANÇAS <br> 2 a 17 anos</span>
-												<div class="form-group">
-													<select class="form-control">
-														<option selected>3</option>
-														<option>1</option>
-														<option>2</option>
-													</select>
-												</div>
-											</div>
-
-											<div class="person">
-												<span>Quarto 1</span>
-												<span>ADULTOS <br> + de 18 anos</span>
-												<div class="form-group">
-													<select class="form-control">
-														<option selected>3</option>
-														<option>1</option>
-														<option>2</option>
-													</select>
-												</div>
-												<span>CRIANÇAS <br> 2 a 17 anos</span>
-												<div class="form-group">
-													<select class="form-control">
-														<option selected>3</option>
-														<option>1</option>
-														<option>2</option>
-													</select>
-												</div>
-											</div>
 										</div>
 									</div>
 
@@ -289,8 +275,39 @@
 											<input type="text" class="form-control datepicker input-icon"
 												placeholder="Data volta">
 										</div>
-										<div class="more-options col-md-2">
+										<div class="more-options col-md-2 pointer" id="js-more-options">
 											+ <br> Opções
+										</div>
+										<div class="is-hidden" id="js-options-input">
+											<div class="triangle"></div>
+											<span class="d-block text-right text-light mb-2 pointer" id="js-closeOptions">Fechar x</span>
+											<div class="mb-1">
+												<select class="form-control">
+													<option selected>CIA AÉREA</option>
+													<option>1</option>
+													<option>2</option>
+												</select>
+											</div>
+											<div class="mb-1">
+												<select class="form-control">
+													<option selected>CLASSE</option>
+													<option>1</option>
+													<option>2</option>
+												</select>
+											</div>
+											<div class="mb-1">
+												<select class="form-control">
+													<option selected>BAGAGEM</option>
+													<option>1</option>
+													<option>2</option>
+												</select>
+											</div>
+											<div class="row no-gutter p-3">
+												<label class="radio-inline mr-5 text-uppercase">
+													<input type="radio" name="optradio" checked="">
+													Somente vôos diretos
+												</label>
+											</div>
 										</div>
 									</div>
 									<div class="footer-voo">
@@ -343,13 +360,15 @@
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<select class="form-control">
+												<i class="fas fa-question"></i>
 												<option selected>EXPERIÊNCIA</option>
 												<option>...</option>
 												<option>2 NOITES</option>
 											</select>
 										</div>
 										<div class="form-group col-md-6">
-											<select class="form-control">
+											<i class="fas fa-user"></i>
+											<select class="form-control pl-4">
 												<option selected>TIPO DE VIAGEM</option>
 												<option>1 NOITE</option>
 												<option>2 NOITES</option>
@@ -360,15 +379,16 @@
 										<div class="count-people">
 											<div class="form-group">
 												<label>Quartos</label>
-												<select class="form-control">
+												<select class="form-control pl-4" id="js-roteiros-quartos">
 													<option selected>2</option>
 													<option>1</option>
 													<option>2</option>
+													<option>3</option>
 												</select>
 											</div>
 										</div>
 
-										<div class="person-content mb-3">
+										<div class="person-content mb-3" id="js-roteiros-person">
 											<div class="person mb-2">
 												<span>Quarto 1</span>
 												<span>Adultos <br> + de 18 anos</span>
@@ -388,10 +408,10 @@
 													</select>
 												</div>
 											</div>
-
-											<div class="person">
+										
+											<div class="person mb-2">
 												<span>Quarto 1</span>
-												<span>ADULTOS <br> + de 18 anos</span>
+												<span>Adultos <br> + de 18 anos</span>
 												<div class="form-group">
 													<select class="form-control">
 														<option selected>3</option>
@@ -409,7 +429,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+										</div>
 									<button type="submit" class="btn btn-primary mb-3">Buscar</button>
 								</form>
 							</div>
@@ -470,13 +490,259 @@
 
 	</header>
 
-	<main class="container">
+	<main>
 
-		<section>
+		<section class="container">
+			<div class="row">
+				<h2 class="col-12 text-uppercase text-center mb-5">Roteiros em Destaque</h2>
+				<div class="col-4 mb-4">
+					<a href="http://www.colombitravel.com.br/service/package/detail/3711/6c022fc5f903311d603f65e92f0908d4"
+						class="card-link">
+						<div class="card">
+							<img class="card-img-top"
+								src="http://colombitravel.netsar.com/produto/imagens/pacote/midia_1089_3711-p.jpg"
+								alt="Card image cap">
+							<span class="legend-card">Essências da Costa Amalfitana</span>
+							<div class="card-body">
+								<h5 class="card-title">Costa Amalfitana</h5>
+
+								<h4 class="card-subtitle mb-2 text-muted">4 Noites / 5 dias</h4>
+								<p class="card-text">Desfrute de um passeio pelas ilhas de Capri e Anacapri e uma
+									incrível
+									degustação de licores produzidos na própria cidade de Sorrento.</p>
+								<p class="card-text h4" style="color: #6CAFA5;">a partir de € 1.518,67 / pessoa</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-4 mb-4">
+					<a href="http://www.colombitravel.com.br/service/package/detail/3711/6c022fc5f903311d603f65e92f0908d4"
+						class="card-link">
+						<div class="card">
+							<img class="card-img-top"
+								src="http://colombitravel.netsar.com/produto/imagens/pacote/midia_1089_3711-p.jpg"
+								alt="Card image cap">
+							<span class="legend-card">Essências da Costa Amalfitana</span>
+							<div class="card-body">
+								<h5 class="card-title">Costa Amalfitana</h5>
+
+								<h4 class="card-subtitle mb-2 text-muted">4 Noites / 5 dias</h4>
+								<p class="card-text">Desfrute de um passeio pelas ilhas de Capri e Anacapri e uma
+									incrível
+									degustação de licores produzidos na própria cidade de Sorrento.</p>
+								<p class="card-text h4" style="color: #6CAFA5;">a partir de € 1.518,67 / pessoa</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-4 mb-4">
+					<a href="http://www.colombitravel.com.br/service/package/detail/3711/6c022fc5f903311d603f65e92f0908d4"
+						class="card-link">
+						<div class="card">
+							<img class="card-img-top"
+								src="http://colombitravel.netsar.com/produto/imagens/pacote/midia_1089_3711-p.jpg"
+								alt="Card image cap">
+							<span class="legend-card">Essências da Costa Amalfitana</span>
+							<div class="card-body">
+								<h5 class="card-title">Costa Amalfitana</h5>
+
+								<h4 class="card-subtitle mb-2 text-muted">4 Noites / 5 dias</h4>
+								<p class="card-text">Desfrute de um passeio pelas ilhas de Capri e Anacapri e uma
+									incrível
+									degustação de licores produzidos na própria cidade de Sorrento.</p>
+								<p class="card-text h4" style="color: #6CAFA5;">a partir de € 1.518,67 / pessoa</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-4 mb-4">
+					<a href="http://www.colombitravel.com.br/service/package/detail/3711/6c022fc5f903311d603f65e92f0908d4"
+						class="card-link">
+						<div class="card">
+							<img class="card-img-top"
+								src="http://colombitravel.netsar.com/produto/imagens/pacote/midia_1089_3711-p.jpg"
+								alt="Card image cap">
+							<span class="legend-card">Essências da Costa Amalfitana</span>
+							<div class="card-body">
+								<h5 class="card-title">Costa Amalfitana</h5>
+
+								<h4 class="card-subtitle mb-2 text-muted">4 Noites / 5 dias</h4>
+								<p class="card-text">Desfrute de um passeio pelas ilhas de Capri e Anacapri e uma
+									incrível
+									degustação de licores produzidos na própria cidade de Sorrento.</p>
+								<p class="card-text h4" style="color: #6CAFA5;">a partir de € 1.518,67 / pessoa</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-4 mb-4">
+					<a href="http://www.colombitravel.com.br/service/package/detail/3711/6c022fc5f903311d603f65e92f0908d4"
+						class="card-link">
+						<div class="card">
+							<img class="card-img-top"
+								src="http://colombitravel.netsar.com/produto/imagens/pacote/midia_1089_3711-p.jpg"
+								alt="Card image cap">
+							<span class="legend-card">Essências da Costa Amalfitana</span>
+							<div class="card-body">
+								<h5 class="card-title">Costa Amalfitana</h5>
+
+								<h4 class="card-subtitle mb-2 text-muted">4 Noites / 5 dias</h4>
+								<p class="card-text">Desfrute de um passeio pelas ilhas de Capri e Anacapri e uma
+									incrível
+									degustação de licores produzidos na própria cidade de Sorrento.</p>
+								<p class="card-text h4" style="color: #6CAFA5;">a partir de € 1.518,67 / pessoa</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-4 mb-4">
+					<a href="http://www.colombitravel.com.br/service/package/detail/3711/6c022fc5f903311d603f65e92f0908d4"
+						class="card-link">
+						<div class="card">
+							<img class="card-img-top"
+								src="http://colombitravel.netsar.com/produto/imagens/pacote/midia_1089_3711-p.jpg"
+								alt="Card image cap">
+							<span class="legend-card">Essências da Costa Amalfitana</span>
+							<div class="card-body">
+								<h5 class="card-title">Costa Amalfitana</h5>
+
+								<h4 class="card-subtitle mb-2 text-muted">4 Noites / 5 dias</h4>
+								<p class="card-text">Desfrute de um passeio pelas ilhas de Capri e Anacapri e uma
+									incrível
+									degustação de licores produzidos na própria cidade de Sorrento.</p>
+								<p class="card-text h4" style="color: #6CAFA5;">a partir de € 1.518,67 / pessoa</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+
+
 
 		</section>
 
+		<section class="hoteis p-5" style="background-color: #696B6D;">
+
+			<div class="container">
+
+				<div class="row">
+
+					<h2 class="col-12 mb-5 text-uppercase text-center text-light">Hotéis Experiências</h2>
+					
+					<div class="card col-3 p-0 mb-3" style="border-color: #696b6d;">
+						<img class="card-img-top" src="http://colombitravel.netsar.com/data_dir/colombitravel.netsar.com/produto/imagens/hotelaria/335818/resumo/Tierra_Patagonia_-_500x261.JPG" alt="Card image cap">
+						<div class="card-body" style="background: rgb(71, 72, 73);">
+							<h5 class="card-title text-light">Tierra Patagonia Hotel & Spa</h5>
+							<h6 class="card-subtitle mb-2 text-muted text-light">Chile</h6>
+							<a href="http://www.colombitravel.com.br/service/supplier/hosting/detail/335818" class="text-light">
+								Ver mais
+							</a>
+						</div>
+					</div>
+					<div class="card col-3 p-0 mb-3" style="border-color: #696b6d;">
+							<img class="card-img-top" src="http://colombitravel.netsar.com/data_dir/colombitravel.netsar.com/produto/imagens/hotelaria/335818/resumo/Tierra_Patagonia_-_500x261.JPG" alt="Card image cap">
+							<div class="card-body" style="background: rgb(71, 72, 73);">
+								<h5 class="card-title text-light">Tierra Patagonia Hotel & Spa</h5>
+								<h6 class="card-subtitle mb-2 text-muted text-light">Chile</h6>
+								<a href="http://www.colombitravel.com.br/service/supplier/hosting/detail/335818" class="text-light">
+									Ver mais
+								</a>
+							</div>
+						</div>
+						<div class="card col-3 p-0 mb-3" style="border-color: #696b6d;">
+								<img class="card-img-top" src="http://colombitravel.netsar.com/data_dir/colombitravel.netsar.com/produto/imagens/hotelaria/335818/resumo/Tierra_Patagonia_-_500x261.JPG" alt="Card image cap">
+								<div class="card-body" style="background: rgb(71, 72, 73);">
+									<h5 class="card-title text-light">Tierra Patagonia Hotel & Spa</h5>
+									<h6 class="card-subtitle mb-2 text-muted text-light">Chile</h6>
+									<a href="http://www.colombitravel.com.br/service/supplier/hosting/detail/335818" class="text-light">
+										Ver mais
+									</a>
+								</div>
+							</div>
+							<div class="card col-3 p-0 mb-3" style="border-color: #696b6d;">
+									<img class="card-img-top" src="http://colombitravel.netsar.com/data_dir/colombitravel.netsar.com/produto/imagens/hotelaria/335818/resumo/Tierra_Patagonia_-_500x261.JPG" alt="Card image cap">
+									<div class="card-body" style="background: rgb(71, 72, 73);">
+										<h5 class="card-title text-light">Tierra Patagonia Hotel & Spa</h5>
+										<h6 class="card-subtitle mb-2 text-muted text-light">Chile</h6>
+										<a href="http://www.colombitravel.com.br/service/supplier/hosting/detail/335818" class="text-light">
+											Ver mais
+										</a>
+									</div>
+								</div>
+
+				</div>
+
+			</div>
+
+
+		</section>
+
+
+		<section class="dicas p-5" style="background-color: #A5CE4A">
+
+			<div class="container">
+
+				<div class="row">
+					<h2 class="col-12 text-center text-uppercase mb-2">Dicas</h2>
+					<p class="col-12 text-center mb-5">
+						Somos especialistas, por isso nossas dicas são preciosas. <br>
+						Veja abaixo como deixar a sua experiência ainda mais incrível!
+					</p>
+
+					<div class="col-2">
+						<img src="http://www.colombitravel.com.br/images/icon/experiencias/EXP_COLOMBI_wine_expressions.png" alt="">
+					</div>
+					<div class="col-2">
+						<img src="http://www.colombitravel.com.br/images/icon/experiencias/EXP_COLOMBI_lua_mel.png" alt="">
+					</div>
+					<div class="col-2">
+						<img src="http://www.colombitravel.com.br/images/icon/experiencias/EXP_COLOMBI_viagem_familia.png" alt="">
+					</div>
+					<div class="col-2">
+						<img src="http://www.colombitravel.com.br/images/icon/experiencias/EXP_COLOMBI_ski_snow.png" alt="">
+					</div>
+					<div class="col-2">
+						<img src="http://www.colombitravel.com.br/images/icon/experiencias/EXP_COLOMBI_essencia_cultural.png" alt="">
+					</div>
+					<div class="col-2">
+						<img src="http://www.colombitravel.com.br/images/icon/experiencias/EXP_COLOMBI_sabores_aromas.png" alt="">
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="container-fluid">
+			<div class="row">
+
+				<div class="col-12 mb-4 mt-4">
+					<img src="http://www.colombitravel.com.br/images/cruzeiro.png" class="mx-auto d-block" alt="">
+				</div>
+
+			</div>
+		</section>
+
 	</main>
+
+	<footer class="container-fluid p-5" style="background: #4A4778;">
+		<div class="row">
+
+			<div class="col-12 d-flex flex-row flex-wrap justify-content-center">
+				<a href="">
+					<i class="text-light pl-2 h3 fab fa-facebook-square"></i>
+				</a>
+				<a href="">
+					<i class="text-light pl-2 h3 fab fa-instagram"></i>
+				</a>
+			</div>
+
+			<p class="col-12 text-center text-light">
+				Alameda Santos,1827 - 11º andar - São Paulo/SP - Brasil - + 55 11 3882.0116 - atendimento@colombitravel.com.br
+			</p>
+
+		</div>
+	</footer>
 
 
 	<!-- JSfiles -->

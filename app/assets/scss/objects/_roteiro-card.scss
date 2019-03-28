@@ -1,0 +1,39 @@
+.card {
+    .legend-card {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 16px;
+        top: 240px;
+        position: absolute;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .card-body {
+        background-color: #eeeff0;
+    }
+
+    h4,h5,p {
+        color: #424242;
+        text-decoration: none;
+
+        &:hover {
+            color: #424242;
+            text-decoration: none;
+        }
+    }
+}
+
+.card-link {
+    color: #424242;
+    text-decoration: none;
+
+    &:hover {
+        color: #424242;
+        text-decoration: none;
+    }
+}
+
+.text-light {
+    color: #fff!important;
+}
