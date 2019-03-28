@@ -158,8 +158,10 @@ header {
         background-color: #2E2E2E;
         border-radius: 4px;
         color: #fff;
-        top: 5px;
+        top: -7px;
         text-align: center;
+        line-height: 11px;
+        padding: 10px;
     }
 
     .footer-voo {
@@ -171,6 +173,24 @@ header {
             color: #fff;
             font-size: 10px;
             max-width: 50px;
+        }
+    }
+
+    #js-options-input {
+        position: absolute;
+        left: 520px;
+        width: 250px;
+        padding: 16px;
+        background-color: #646060;
+
+        .triangle {
+            width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent; 
+            position: absolute;
+            left: -10px;
+            border-right:10px solid #646060; 
         }
     }
 

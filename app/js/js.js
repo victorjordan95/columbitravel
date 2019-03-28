@@ -73,6 +73,15 @@ $("#terraplanagem").owlCarousel({
     }
 });
 
+$('#js-more-options').on( "click", function() {
+    $('#js-options-input').toggleClass('is-hidden');
+});
+
+$('#js-closeOptions').on( "click", function() {
+    $('#js-options-input').toggleClass('is-hidden');
+});
+
+
 jQuery(document).ready(function ($) {
 	$('#myCarousel2').carousel({
 		interval: 5000
@@ -93,7 +102,7 @@ jQuery(document).ready(function ($) {
 	$('#myCarousel2').on('slid.bs.carousel', function (e) {
 		var id = $('.item.active').data('slide-number');
 		$('#carousel-text').html($('#slide-content-' + id).html());
-	});
+    });
 });
 
 // Select all links with hashes
