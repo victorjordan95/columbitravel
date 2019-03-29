@@ -11,11 +11,10 @@ $('#js-hotel-quartos').on('change', function () {
     
     const inputHTML = `
     <div class="person mb-2">
-        <span>Quarto 1</span>
+        <span>Quarto</span>
         <span>ADULTOS <br> + de 18 anos</span>
         <div class="form-group">
             <select class="form-control">
-                <option selected>3</option>
                 <option>1</option>
                 <option>2</option>
             </select>
@@ -23,7 +22,6 @@ $('#js-hotel-quartos').on('change', function () {
         <span>CRIANÇAS <br> 2 a 17 anos</span>
         <div class="form-group">
             <select class="form-control">
-                <option selected>3</option>
                 <option>1</option>
                 <option>2</option>
             </select>
@@ -36,7 +34,7 @@ $('#js-hotel-quartos').on('change', function () {
 $('#js-roteiros-quartos').on('change', function () {
     const inputHTML = `
     <div class="person mb-2">
-        <span>Quarto 1</span>
+        <span>Quarto</span>
         <span>Adultos <br> + de 18 anos</span>
         <div class="form-group">
             <select class="form-control">
@@ -48,9 +46,9 @@ $('#js-roteiros-quartos').on('change', function () {
         <span>CRIANÇAS <br> 2 a 17 anos</span>
         <div class="form-group">
             <select class="form-control">
-                <option selected>3</option>
                 <option>1</option>
                 <option>2</option>
+                <option>3</option>
             </select>
         </div>
     </div>

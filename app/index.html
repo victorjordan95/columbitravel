@@ -226,22 +226,22 @@
 
 										<div class="person-content mb-3" id="js-hotel-person">
 											<div class="person mb-2">
-													<span class="person-title">Quarto 1</span>
+													<span class="person-title">Quarto</span>
 
 													<span class="person-label">ADULTOS <br> + de 18 anos</span>
 													<div class="form-group">
 														<select class="form-control">
-															<option selected>3</option>
 															<option>1</option>
 															<option>2</option>
+															<option>3</option>
 														</select>
 													</div>
 													<span class="person-label">CRIANÇAS <br> 2 a 17 anos</span>
 													<div class="form-group">
 														<select class="form-control">
-															<option selected>3</option>
 															<option>1</option>
 															<option>2</option>
+															<option>3</option>
 														</select>
 													</div>
 												</div>
@@ -253,12 +253,16 @@
 							</div>
 
 							<div class="tab-pane fade p-3" id="voo" role="tabpanel" aria-labelledby="two-tab">
-								<form>
+								<form >
 									<div class="row no-gutter p-3">
-										<label class="radio-inline mr-5"><input type="radio" name="optradio" checked="">
-											IDA E VOLTA</label>
+										<label class="radio-inline mr-5">
+											<input type='radio' class='free atype' value='0' name='dutch' checked='checked' autocomplete="off"/>
+											IDA E VOLTA
+										</label>
 										<label class="radio-inline">
-											<input type="radio" name="optradio">SOMENTE IDA</label>
+											<input type='radio' class='paid atype' value='1' name='dutch' autocomplete="off"/>
+											SOMENTE IDA
+										</label>
 									</div>
 									<div class="form-row">
 										<div class="form-group col-md-12">
@@ -362,8 +366,8 @@
 									</div>
 									<div class="form-row">
 										<div class="form-group col-md-6">
+											<i class="fas fa-question"></i>
 											<select class="form-control">
-												<i class="fas fa-question"></i>
 												<option selected>EXPERIÊNCIA</option>
 												<option>...</option>
 												<option>2 NOITES</option>
@@ -383,7 +387,6 @@
 											<div class="form-group">
 												<label>Quartos</label>
 												<select class="form-control pl-4" id="js-roteiros-quartos">
-													<option selected>2</option>
 													<option>1</option>
 													<option>2</option>
 													<option>3</option>
@@ -393,11 +396,10 @@
 
 										<div class="person-content mb-3" id="js-roteiros-person">
 											<div class="person mb-2">
-												<span>Quarto 1</span>
+												<span>Quarto</span>
 												<span>Adultos <br> + de 18 anos</span>
 												<div class="form-group">
 													<select class="form-control">
-														<option selected>3</option>
 														<option>1</option>
 														<option>2</option>
 													</select>
@@ -405,7 +407,6 @@
 												<span>CRIANÇAS <br> 2 a 17 anos</span>
 												<div class="form-group">
 													<select class="form-control">
-														<option selected>3</option>
 														<option>1</option>
 														<option>2</option>
 													</select>
@@ -417,7 +418,6 @@
 												<span>Adultos <br> + de 18 anos</span>
 												<div class="form-group">
 													<select class="form-control">
-														<option selected>3</option>
 														<option>1</option>
 														<option>2</option>
 													</select>
@@ -425,7 +425,6 @@
 												<span>CRIANÇAS <br> 2 a 17 anos</span>
 												<div class="form-group">
 													<select class="form-control">
-														<option selected>3</option>
 														<option>1</option>
 														<option>2</option>
 													</select>
@@ -447,7 +446,7 @@
 										</div>
 									</div>
 									<div class="footer-voo" style="position: relative;">
-										<div class="form-group w-25">
+										<div class="form-group w-30">
 											<i class="far fa-calendar-alt"></i>
 											<input type="text" class="form-control datepicker input-icon"
 												placeholder="Data">
