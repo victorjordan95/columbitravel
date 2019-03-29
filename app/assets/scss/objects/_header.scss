@@ -33,7 +33,19 @@ header {
     .tab-content {
         background-color: #646060;
         height: calc(100% - 110px);
-        width: 500px;
+        width: 100%;
+        @media only screen and (min-width: 768px) {
+            width: 500px;
+
+        } 
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+        }
     }
 
     .nav-tabs .nav-item {
@@ -53,6 +65,20 @@ header {
         .nav-link {
             background-color: #888181;
             color: #fff;
+            font-size: 12px;
+            padding: .5rem 3px;
+
+            i {
+                font-size: 12px;
+            }
+            @media only screen and (min-width: 768px) {
+                font-size: 16px;
+                padding: .5rem 1rem;
+
+                i {
+                    font-size: 16px;
+                }
+            } 
         }
         &:first-child {
             .nav-link {
@@ -111,14 +137,25 @@ header {
         justify-content: space-between;
 
         .count-people {
-            margin-right: 24px;
+            width: 100%;
+            
+            @media only screen and (min-width: 768px) {
+                margin-right: 24px;
+                width: 20%;
+            } 
+    
         }
 
         .person-content {
             display: flex;
             flex-flow: column wrap;
             justify-content: space-between;
-            width: 80%;
+            width: 100%;
+            
+            @media only screen and (min-width: 768px) {
+                margin-right: 0;
+                width: calc(80% - 24px);
+            } 
         }
         .person {
             background-color: #484343;
@@ -133,11 +170,36 @@ header {
                 font-size: 12px;
                 margin: 0 4px;
                 line-height: 16px;
-                max-width: 85px;
+                @media only screen and (min-width: 768px) {
+                    margin: 0;
+                    max-width: 85px;
+                    width: 20%;
+                } 
+            }
+
+            .person-title {
+                width: 100%;
+                @media only screen and (min-width: 768px) {
+                    max-width: 85px;
+                    width: 15%!important;
+                } 
+            }
+
+            .person-label {
+                width: 45%;
+                @media only screen and (min-width: 768px) {
+                    max-width: 85px;
+                    width: 20%;
+                } 
             }
 
             .form-group {
                 margin: 0;
+                width: 45%;
+                @media only screen and (min-width: 768px) {
+                    max-width: 85px;
+                    width: 20%;
+                } 
             }
         }
     }
