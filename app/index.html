@@ -226,7 +226,7 @@
 
 										<div class="person-content mb-3" id="js-hotel-person">
 											<div class="person mb-2">
-													<span class="person-title">Quarto</span>
+													<span class="person-title">Quarto 1</span>
 
 													<span class="person-label">ADULTOS <br> + de 18 anos</span>
 													<div class="form-group">
@@ -254,7 +254,7 @@
 
 							<div class="tab-pane fade p-3" id="voo" role="tabpanel" aria-labelledby="two-tab">
 								<form >
-									<div class="row no-gutter p-3">
+									<div class="row no-gutter pl-3 pr-3 pb-3 pt-0">
 										<label class="radio-inline mr-5">
 											<input type='radio' class='free atype' value='0' name='dutch' checked='checked' autocomplete="off"/>
 											IDA E VOLTA
@@ -310,8 +310,8 @@
 												</select>
 											</div>
 											<div class="row no-gutter p-3">
-												<label class="radio-inline mr-5 text-uppercase">
-													<input type="radio" name="optradio" checked="">
+												<label class="radio-inline text-uppercase">
+													<input type="checkbox" name="optradio" checked="">
 													Somente vôos diretos
 												</label>
 											</div>
@@ -323,7 +323,6 @@
 										</span>
 										<div>
 											<select class="form-control">
-												<option selected>1</option>
 												<option>1</option>
 												<option>2</option>
 											</select>
@@ -333,7 +332,6 @@
 										</span>
 										<div>
 											<select class="form-control">
-												<option selected>1</option>
 												<option>1</option>
 												<option>2</option>
 											</select>
@@ -343,7 +341,6 @@
 										</span>
 										<div class="form-group">
 											<select class="form-control">
-												<option selected>1</option>
 												<option>1</option>
 												<option>2</option>
 											</select>
@@ -367,7 +364,7 @@
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<i class="fas fa-question"></i>
-											<select class="form-control">
+											<select class="form-control pl-4">
 												<option selected>EXPERIÊNCIA</option>
 												<option>...</option>
 												<option>2 NOITES</option>
@@ -396,7 +393,7 @@
 
 										<div class="person-content mb-3" id="js-roteiros-person">
 											<div class="person mb-2">
-												<span>Quarto</span>
+												<span>Quarto 1</span>
 												<span>Adultos <br> + de 18 anos</span>
 												<div class="form-group">
 													<select class="form-control">
@@ -414,7 +411,7 @@
 											</div>
 										
 											<div class="person mb-2">
-												<span>Quarto 1</span>
+												<span>Quarto 2</span>
 												<span>Adultos <br> + de 18 anos</span>
 												<div class="form-group">
 													<select class="form-control">
@@ -453,7 +450,6 @@
 										</div>
 										<div>
 											<select class="form-control">
-												<option selected>1</option>
 												<option>1</option>
 												<option>2</option>
 											</select>
@@ -463,7 +459,6 @@
 										</span>
 										<div>
 											<select class="form-control">
-												<option selected>1</option>
 												<option>1</option>
 												<option>2</option>
 											</select>
@@ -473,7 +468,6 @@
 										</span>
 										<div class="form-group">
 											<select class="form-control">
-												<option selected>1</option>
 												<option>1</option>
 												<option>2</option>
 											</select>
@@ -755,7 +749,7 @@
 	<script src="js/js.js"></script>
 	<script>
 		$(function () {
-			$(".datepicker").datepicker();
+			$(".datepicker").datepicker({ dateFormat: 'dd/mm/yy' }).val();
 		});
 	</script>
 </body>

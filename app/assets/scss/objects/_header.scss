@@ -158,6 +158,7 @@ header {
             } 
         }
         .person {
+            align-items: center;
             background-color: #484343;
             color: #fff;
             display: flex;
@@ -197,6 +198,7 @@ header {
                 margin: 0;
                 width: 45%;
                 @media only screen and (min-width: 768px) {
+                    height: 45px;
                     max-width: 85px;
                     width: 20%;
                 } 

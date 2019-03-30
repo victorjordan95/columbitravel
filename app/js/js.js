@@ -9,51 +9,59 @@ $('#js-closeOptions').on( "click", function() {
 
 $('#js-hotel-quartos').on('change', function () {
     
-    const inputHTML = `
-    <div class="person mb-2">
-        <span>Quarto</span>
-        <span>ADULTOS <br> + de 18 anos</span>
-        <div class="form-group">
-            <select class="form-control">
-                <option>1</option>
-                <option>2</option>
-            </select>
+    const id = $('#js-hotel-person');
+    id.html('');
+    
+    for (let index = 0; index < this.value; index++) {
+        id.append(`
+        <div class="person mb-2">
+            <span>Quarto ${index + 1}</span>
+            <span>ADULTOS <br> + de 18 anos</span>
+            <div class="form-group">
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </div>
+            <span>CRIANÇAS <br> 2 a 17 anos</span>
+            <div class="form-group">
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </div>
         </div>
-        <span>CRIANÇAS <br> 2 a 17 anos</span>
-        <div class="form-group">
-            <select class="form-control">
-                <option>1</option>
-                <option>2</option>
-            </select>
-        </div>
-    </div>
-    `;
-    cleanAndAppendHTML(this.value, inputHTML, '#js-hotel-person');
+        `);
+    }
 });
 
 $('#js-roteiros-quartos').on('change', function () {
-    const inputHTML = `
-    <div class="person mb-2">
-        <span>Quarto</span>
-        <span>Adultos <br> + de 18 anos</span>
-        <div class="form-group">
-            <select class="form-control">
-                <option selected>3</option>
-                <option>1</option>
-                <option>2</option>
-            </select>
-        </div>
-        <span>CRIANÇAS <br> 2 a 17 anos</span>
-        <div class="form-group">
-            <select class="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
-        </div>
-    </div>
-    `;
-    cleanAndAppendHTML(this.value, inputHTML, '#js-roteiros-person');
+    const id = $('#js-roteiros-person');
+    id.html('');
+    
+    for (let index = 0; index < this.value; index++) {
+        id.append(`
+            <div class="person mb-2">
+                <span>Quarto ${index + 1}</span>
+                <span>Adultos <br> + de 18 anos</span>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option selected>3</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <span>CRIANÇAS <br> 2 a 17 anos</span>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </div>
+        `);
+    }
 });
 
 /**
