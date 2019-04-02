@@ -64,19 +64,6 @@ $('#js-roteiros-quartos').on('change', function () {
     }
 });
 
-/**
- * When Change the quantity of
- * rooms in the HTML, append the 
- * amount of select input
- */
-function cleanAndAppendHTML(count, html, id) {
-    $(id).html('');
-    
-    for (let index = 0; index < count; index++) {
-        $(id).append(html);
-    }
-};
-
 $("#owl-clients").owlCarousel({
     autoplay: true,
     autoplayHoverPause: true,
@@ -101,3 +88,4 @@ $("#owl-clients").owlCarousel({
         }
     }
 });
+
