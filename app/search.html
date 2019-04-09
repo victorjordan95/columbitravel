@@ -92,7 +92,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contato</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <div class="atendimento">
                             <div class="wrapper">
                                 <div class="container">
@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </nav>
@@ -116,45 +116,231 @@
         <div class="row">
 
             <div class="col-xs-12 col-md-4">
-                <div class="filters">
-                    <div class="filter-options">
-                        
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                value="option1" checked>
-                            <label class="form-check-label" for="exampleRadios1">
-                                Default radio
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                value="option2">
-                            <label class="form-check-label" for="exampleRadios2">
-                                Second default radio
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
-                                value="option3" disabled>
-                            <label class="form-check-label" for="exampleRadios3">
-                                Disabled radio
-                            </label>
+                <div class="filters rounded">
+                    <div class="filter-options p-4">
+
+                        <div class="mb-3">
+                            <a class="card-link filter-title mb-2 d-flex flex-row justify-content-between"
+                                data-toggle="collapse" href="#conexoes">
+                                Conexões
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <div id="conexoes" class="collapse show p-2" data-parent="#conexoes">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        <span class="font-weight-bold">Direto</span> <br>
+                                        <span class="text-muted">R$ 2.269</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        <span class="font-weight-bold">Direto</span> <br>
+                                        <span class="text-muted">R$ 2.269</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        <span class="font-weight-bold">Direto</span> <br>
+                                        <span class="text-muted">R$ 2.269</span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="formControlRange">Example Range input</label>
-                            <input type="range" class="form-control-range" id="formControlRange">
+                        <div class="mb-3">
+                            <a class="card-link filter-title mb-2 d-flex flex-row justify-content-between"
+                                data-toggle="collapse" href="#arrivalHour">
+                                Horários de partida
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <div id="arrivalHour" class="collapse show p-2" data-parent="#arrivalHour">
+                                <div class="w-100 mb-4">
+                                    <div class="slider-labels mb-3">
+                                        <span class="font-weight-bold d-block">Ida</span>
+                                        <span id="slider-range-value1"></span>
+                                        <span> - </span>
+                                        <span id="slider-range-value2"></span>
+                                    </div>
+                                    <div class="w-100">
+                                        <div id="slider-range"></div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="hidden" name="min-value" value="">
+                                        <input type="hidden" name="max-value" value="">
+                                    </div>
+                                </div>
+
+                                <div class="w-100 mb-4">
+                                    <div class="slider-labels mb-3">
+                                        <span class="font-weight-bold d-block">Ida</span>
+                                        <span id="volta1"></span>
+                                        <span> - </span>
+                                        <span id="volta2"></span>
+                                    </div>
+                                    <div class="w-100">
+                                        <div id="slider-range2"></div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="hidden" name="min-value" value="">
+                                        <input type="hidden" name="max-value" value="">
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+
+                        <div class="mb-3">
+                            <a class="card-link filter-title mb-2 d-flex flex-row justify-content-between"
+                                data-toggle="collapse" href="#duracao">
+                                Duração da Viagem
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <div id="duracao" class="collapse show p-2" data-parent="#duracao">
+                                <div class="w-100 mb-4">
+                                    <div class="slider-labels mb-3">
+                                        <span id="duracao1"></span>
+                                        <span id="duracao2"></span>
+                                    </div>
+                                    <div class="w-100">
+                                        <div id="slider-range3"></div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="hidden" name="min-value" value="">
+                                        <input type="hidden" name="max-value" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+
             <div class="col-xs-12 col-md-8">
 
                 <div class="search-result">
 
-                    <div class="card shadow p-3 mb-5 bg-white rounded">
-                        <h2>title</h2>
-                        <h5>texto</h5>
+                    <div class="tripcard shadow p-3 mb-3 bg-white rounded d-flex flex-row justify-content-between">
+                        <div class="trip-info w-30 d-flex flex-column justify-content-between">
+                            <span>12:00pm - 11:16pm</span>
+                            <span class="text-muted small">Copa</span>
+                            <span class="text-green">Poor Flight (3.4/10)</span>
+                            <span>Details & baggage fees</span>
+                        </div>
+                        <div class="w-40 d-flex flex-column justify-content-start">
+                            <span>
+                                12h 16m (1 stop)
+                            </span>
+                            <span class="text-muted">
+                                GRU - 2h 9m in PTY - MIA
+                            </span>
+                        </div>
+                        <div class="w-20 align-items-start d-flex flex-row justify-content-between">
+                            <div class="price d-flex flex-column justify-content-start">
+                                <span class="text-right font-weight-bold p-0">$670</span>
+                                <span class="text-right text-muted small p-0">roundtrip</span>
+                            </div>
+                            <button class="btn btn-warning">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="tripcard shadow p-3 mb-3 bg-white rounded d-flex flex-row justify-content-between">
+                        <div class="trip-info w-30 d-flex flex-column justify-content-between">
+                            <span>12:00pm - 11:16pm</span>
+                            <span class="text-muted small">Copa</span>
+                            <span class="text-green">Poor Flight (3.4/10)</span>
+                            <span>Details & baggage fees</span>
+                        </div>
+                        <div class="w-40 d-flex flex-column justify-content-start">
+                            <span>
+                                12h 16m (1 stop)
+                            </span>
+                            <span class="text-muted">
+                                GRU - 2h 9m in PTY - MIA
+                            </span>
+                        </div>
+                        <div class="w-20 align-items-start d-flex flex-row justify-content-between">
+                            <div class="price d-flex flex-column justify-content-start">
+                                <span class="text-right font-weight-bold p-0">$670</span>
+                                <span class="text-right text-muted small p-0">roundtrip</span>
+                            </div>
+                            <button class="btn btn-warning">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="tripcard shadow p-3 mb-3 bg-white rounded d-flex flex-row justify-content-between">
+                        <div class="trip-info w-30 d-flex flex-column justify-content-between">
+                            <span>12:00pm - 11:16pm</span>
+                            <span class="text-muted small">Copa</span>
+                            <span class="text-green">Poor Flight (3.4/10)</span>
+                            <span>Details & baggage fees</span>
+                        </div>
+                        <div class="w-40 d-flex flex-column justify-content-start">
+                            <span>
+                                12h 16m (1 stop)
+                            </span>
+                            <span class="text-muted">
+                                GRU - 2h 9m in PTY - MIA
+                            </span>
+                        </div>
+                        <div class="w-20 align-items-start d-flex flex-row justify-content-between">
+                            <div class="price d-flex flex-column justify-content-start">
+                                <span class="text-right font-weight-bold p-0">$670</span>
+                                <span class="text-right text-muted small p-0">roundtrip</span>
+                            </div>
+                            <button class="btn btn-warning">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="tripcard shadow p-3 mb-3 bg-white rounded d-flex flex-row justify-content-between">
+                        <div class="trip-info w-30 d-flex flex-column justify-content-between">
+                            <span>12:00pm - 11:16pm</span>
+                            <span class="text-muted small">Copa</span>
+                            <span class="text-green">Poor Flight (3.4/10)</span>
+                            <span>Details & baggage fees</span>
+                        </div>
+                        <div class="w-40 d-flex flex-column justify-content-start">
+                            <span>
+                                12h 16m (1 stop)
+                            </span>
+                            <span class="text-muted">
+                                GRU - 2h 9m in PTY - MIA
+                            </span>
+                        </div>
+                        <div class="w-20 align-items-start d-flex flex-row justify-content-between">
+                            <div class="price d-flex flex-column justify-content-start">
+                                <span class="text-right font-weight-bold p-0">$670</span>
+                                <span class="text-right text-muted small p-0">roundtrip</span>
+                            </div>
+                            <button class="btn btn-warning">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="tripcard shadow p-3 mb-3 bg-white rounded d-flex flex-row justify-content-between">
+                        <div class="trip-info w-30 d-flex flex-column justify-content-between">
+                            <span>12:00pm - 11:16pm</span>
+                            <span class="text-muted small">Copa</span>
+                            <span class="text-green">Poor Flight (3.4/10)</span>
+                            <span>Details & baggage fees</span>
+                        </div>
+                        <div class="w-40 d-flex flex-column justify-content-start">
+                            <span>
+                                12h 16m (1 stop)
+                            </span>
+                            <span class="text-muted">
+                                GRU - 2h 9m in PTY - MIA
+                            </span>
+                        </div>
+                        <div class="w-20 align-items-start d-flex flex-row justify-content-between">
+                            <div class="price d-flex flex-column justify-content-start">
+                                <span class="text-right font-weight-bold p-0">$670</span>
+                                <span class="text-right text-muted small p-0">roundtrip</span>
+                            </div>
+                            <button class="btn btn-warning">Select</button>
+                        </div>
                     </div>
 
                 </div>
@@ -162,6 +348,13 @@
             </div>
         </div>
     </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/range.js"></script>
 </body>
 
 </html>

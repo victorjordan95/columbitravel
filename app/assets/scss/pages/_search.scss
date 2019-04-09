@@ -1,10 +1,20 @@
 .filters {
-    background-color: #c1c1c1;
+    background-color: #F5F5F5;
     // position: fixed;
     height: 80vh;
     margin-top: 48px;
 
     .filter-options {
-        position: fixed;
+        // position: fixed;
     }
+
+    .filter-title {
+        color: $blue;
+        border-bottom: 1px solid $blue;
+        font-weight: bold;
+    }
+}
+
+.search-result {
+    margin-top: 48px;
 }
