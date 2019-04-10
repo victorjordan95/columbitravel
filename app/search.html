@@ -112,7 +112,7 @@
         </nav>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
 
             <div class="col-xs-12 col-md-4">
@@ -120,29 +120,29 @@
                     <div class="filter-options p-4">
 
                         <div class="mb-3">
-                            <a class="card-link filter-title mb-2 d-flex flex-row justify-content-between"
+                            <a class="card-link filter-title mb-2 align-items-center d-flex flex-row justify-content-between js-toggleLink"
                                 data-toggle="collapse" href="#conexoes">
                                 Conexões
-                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-chevron-down rotate"></i>
                             </a>
                             <div id="conexoes" class="collapse show p-2" data-parent="#conexoes">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    <label class="form-check-label">
                                         <span class="font-weight-bold">Direto</span> <br>
                                         <span class="text-muted">R$ 2.269</span>
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    <label class="form-check-label">
                                         <span class="font-weight-bold">Direto</span> <br>
                                         <span class="text-muted">R$ 2.269</span>
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    <label class="form-check-label">
                                         <span class="font-weight-bold">Direto</span> <br>
                                         <span class="text-muted">R$ 2.269</span>
                                     </label>
@@ -151,10 +151,10 @@
                         </div>
 
                         <div class="mb-3">
-                            <a class="card-link filter-title mb-2 d-flex flex-row justify-content-between"
+                            <a class="card-link filter-title mb-2 align-items-center d-flex flex-row justify-content-between js-toggleLink"
                                 data-toggle="collapse" href="#arrivalHour">
                                 Horários de partida
-                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-chevron-down rotate"></i>
                             </a>
                             <div id="arrivalHour" class="collapse show p-2" data-parent="#arrivalHour">
                                 <div class="w-100 mb-4">
@@ -193,23 +193,59 @@
                         </div>
 
                         <div class="mb-3">
-                            <a class="card-link filter-title mb-2 d-flex flex-row justify-content-between"
+                            <a class="card-link filter-title mb-2 align-items-center d-flex flex-row justify-content-between js-toggleLink"
                                 data-toggle="collapse" href="#duracao">
                                 Duração da Viagem
-                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-chevron-down rotate"></i>
                             </a>
                             <div id="duracao" class="collapse show p-2" data-parent="#duracao">
                                 <div class="w-100 mb-4">
                                     <div class="slider-labels mb-3">
-                                        <span id="duracao1"></span>
-                                        <span id="duracao2"></span>
+                                        <span id="duracao1"></span> Horas
                                     </div>
                                     <div class="w-100">
                                         <div id="slider-range3"></div>
                                     </div>
                                     <div class="col-sm-12">
                                         <input type="hidden" name="min-value" value="">
-                                        <input type="hidden" name="max-value" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <a class="card-link filter-title mb-2 align-items-center d-flex flex-row justify-content-between js-toggleLink"
+                                data-toggle="collapse" href="#linhas">
+                                Linhas aéreas
+                                <i class="fas fa-chevron-down rotate"></i>
+                            </a>
+                            <div id="linhas" class="collapse show p-2 airline" data-parent="#linhas">
+                                <p class="d-flex flex-row justify-content-between w-100">
+                                    <span class="airline-link" id="js-checkAll">Marcar tudo</span>
+                                    <span class="airline-separator"></span>
+                                    <span class="airline-link" id="js-uncheckAll">Apagar tudo</span>
+                                </p>
+                                <div class="w-100 mb-4">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input js-airline" type="checkbox" value="">
+                                        <label class="form-check-label">
+                                            <span class="font-weight-bold">Aerolines Argentinas</span> <br>
+                                            <span class="text-muted">R$ 2.269</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input js-airline" type="checkbox" value="">
+                                        <label class="form-check-label">
+                                            <span class="font-weight-bold">Air Canada</span> <br>
+                                            <span class="text-muted">R$ 2.500</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input js-airline" type="checkbox" value="">
+                                        <label class="form-check-label">
+                                            <span class="font-weight-bold">American Airlines</span> <br>
+                                            <span class="text-muted">R$ 2.300</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +279,7 @@
                                 <span class="text-right font-weight-bold p-0">$670</span>
                                 <span class="text-right text-muted small p-0">roundtrip</span>
                             </div>
-                            <button class="btn btn-warning">Select</button>
+                            <button class="btn btn-select">Select</button>
                         </div>
                     </div>
 
@@ -267,7 +303,7 @@
                                 <span class="text-right font-weight-bold p-0">$670</span>
                                 <span class="text-right text-muted small p-0">roundtrip</span>
                             </div>
-                            <button class="btn btn-warning">Select</button>
+                            <button class="btn btn-select">Select</button>
                         </div>
                     </div>
 
@@ -291,7 +327,7 @@
                                 <span class="text-right font-weight-bold p-0">$670</span>
                                 <span class="text-right text-muted small p-0">roundtrip</span>
                             </div>
-                            <button class="btn btn-warning">Select</button>
+                            <button class="btn btn-select">Select</button>
                         </div>
                     </div>
 
@@ -315,7 +351,7 @@
                                 <span class="text-right font-weight-bold p-0">$670</span>
                                 <span class="text-right text-muted small p-0">roundtrip</span>
                             </div>
-                            <button class="btn btn-warning">Select</button>
+                            <button class="btn btn-select">Select</button>
                         </div>
                     </div>
 
@@ -339,7 +375,7 @@
                                 <span class="text-right font-weight-bold p-0">$670</span>
                                 <span class="text-right text-muted small p-0">roundtrip</span>
                             </div>
-                            <button class="btn btn-warning">Select</button>
+                            <button class="btn btn-select">Select</button>
                         </div>
                     </div>
 

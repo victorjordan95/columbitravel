@@ -1,8 +1,6 @@
 .filters {
     background-color: #F5F5F5;
-    // position: fixed;
-    height: 80vh;
-    margin-top: 48px;
+    margin: 48px 0;
 
     .filter-options {
         // position: fixed;
@@ -12,9 +10,41 @@
         color: $blue;
         border-bottom: 1px solid $blue;
         font-weight: bold;
+
     }
 }
 
 .search-result {
     margin-top: 48px;
+}
+
+.airline {
+
+    .airline-link {
+        color: #2196F3;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .airline-separator {
+        height: auto;
+        border: 1px solid #9E9E9E;
+    }
+
+}
+
+.btn-select {
+    color: #fff;
+    background-color: #4a4876;
+    border-color: #4a4876;
+}
+
+.rotate{
+    transition: all 0.3s ease;
+}
+
+.rotate.down{
+    transform: rotate(180deg);
 }

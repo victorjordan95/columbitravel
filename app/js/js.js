@@ -89,3 +89,18 @@ $("#owl-clients").owlCarousel({
     }
 });
 
+
+$(".js-toggleLink").click(function () {
+    $(this).children('i').toggleClass('down');
+});
+
+// Select all
+$("#js-checkAll").click( function() {
+    $(".js-airline").attr('checked', true);
+    return false;
+});
+// Select none
+$("#js-uncheckAll").click( function() {
+    $(".js-airline").attr('checked', false);
+    return false;
+});
