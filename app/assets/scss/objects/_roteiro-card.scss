@@ -2,11 +2,14 @@
     .legend-card {
         background-color: rgba(0, 0, 0, 0.8);
         padding: 16px;
-        top: 240px;
+        top: 200px;
         position: absolute;
         color: #fff;
         text-align: center;
         font-size: 1.5rem;
+        @media only screen and (min-width: 768px) {
+            top: 240px;
+        } 
     }
 
     .card-body {

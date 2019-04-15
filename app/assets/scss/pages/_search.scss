@@ -2,9 +2,6 @@
     background-color: #F5F5F5;
     margin: 48px 0;
 
-    .filter-options {
-        // position: fixed;
-    }
 
     .filter-title {
         color: $blue;
@@ -47,4 +44,40 @@
 
 .rotate.down{
     transform: rotate(180deg);
+}
+
+.tripcard  {
+    display: column wrap;
+    justify-content: flex-start;
+    @media only screen and (min-width: 768px) {
+        display: row wrap;
+    }
+    .trip-info {
+        width: 100%;
+
+        @media only screen and (min-width: 768px) {
+            width: 40%;
+        }
+    }
+
+    .trip-hour {
+        width: 100%;
+
+        @media only screen and (min-width: 768px) {
+            width: 40%;
+        }
+    }
+
+    .btn-card {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        width: 100%;
+
+        @media only screen and (min-width: 768px) {
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 20%;
+        }
+    }
 }
