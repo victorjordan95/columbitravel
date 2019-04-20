@@ -157,7 +157,7 @@ header {
             } 
         }
         .person {
-            align-items: center;
+            align-items: end;
             background-color: #484343;
             color: #fff;
             display: flex;
@@ -177,6 +177,13 @@ header {
                 } 
             }
 
+            span:first-child {
+                width: 100%;
+                @media only screen and (min-width: 768px) {
+                    width: 16%;
+                }
+            }
+
             .person-title {
                 width: 100%;
                 @media only screen and (min-width: 768px) {
@@ -194,7 +201,7 @@ header {
             }
 
             .form-group {
-                margin: 0;
+                margin: 0 0 8px;
                 width: 45%;
                 @media only screen and (min-width: 768px) {
                     height: 45px;
@@ -222,19 +229,43 @@ header {
         top: 0px;
         text-align: center;
         line-height: 13px;
+        margin-bottom: 8px;
         height: 40px;
         padding: 5px;
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
     }
 
     .footer-voo {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+        padding-bottom: 18px;
+
+        .input-date {
+            width: 100%;
+        }
+
+        .voo-select {
+            margin-bottom: 8px;
+            width: 45%;
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 0;
+                max-width: 30%;
+            }
+        }
 
         span {
             color: #fff;
             font-size: 10px;
-            max-width: 50px;
+            margin-bottom: 8px;
+            width: 50%;
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 0;
+                max-width: 50px;
+
+            }
         }
     }
 
