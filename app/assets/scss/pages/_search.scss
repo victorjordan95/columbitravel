@@ -49,10 +49,12 @@
 }
 
 .tripcard  {
-    display: column wrap;
+    display: flex;
+    flex-flow: column wrap;
     justify-content: flex-start;
     @media only screen and (min-width: 768px) {
-        display: row wrap;
+        align-items: flex-start;
+        flex-flow: row wrap;
     }
     .trip-info {
         width: 100%;
