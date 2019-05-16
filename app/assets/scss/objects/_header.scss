@@ -3,7 +3,12 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 90vh;
+    height: 1000px;
+    @media only screen and (min-width: 768px) {
+        height: 650px;
+    } 
+    @media only screen and (min-width: 992px) {
+    }
 
     .trip-title {
         color: #fff;
