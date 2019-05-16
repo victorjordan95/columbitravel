@@ -36,15 +36,16 @@ header {
         width: 100%;
         @media only screen and (min-width: 768px) {
             width: 500px;
-
         } 
+    }
 
-        /* Large devices (laptops/desktops, 992px and up) */
+    .icon-header {
+        width: 15px;
+        @media only screen and (min-width: 768px) {
+            width: 20px;
+        } 
         @media only screen and (min-width: 992px) {
-        }
-
-        /* Extra large devices (large laptops and desktops, 1200px and up) */
-        @media only screen and (min-width: 1200px) {
+            width: 20px;
         }
     }
 
